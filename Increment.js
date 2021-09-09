@@ -1,7 +1,7 @@
  const domContainer = document.querySelector("#root");
 
 const Increment = () => {
-    const [counter, setCounter] = React.useState(9);
+    const [counter, setCounter] = React.useState(0);
     console.log(reactState);
       return(
           <div id="root">
@@ -22,5 +22,4 @@ const Increment = () => {
      number++;
      display.textContent = number;
   });
-
 
