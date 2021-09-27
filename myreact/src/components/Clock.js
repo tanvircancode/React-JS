@@ -3,12 +3,23 @@ import ReactDOM from 'react-dom';
 
 
 class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
+  }
+    componentDidMount() {
+        setInterval(() => {
+            this.setState({
+                date: new Date(),
+            })
+        }, 1000);
+  }
+
   render() {
     return (
       <h1 className="heading">
         <span className="text">
-          Hello {this.props.children}{' '}
-          {new Date().toLocaleTimeString(this.props.locale)}
+          {this.state.date.toLocaleTimeString(this.props.locale)}
         </span>
       </h1>
     );
