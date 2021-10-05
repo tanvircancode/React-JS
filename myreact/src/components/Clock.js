@@ -21,7 +21,7 @@ class Clock extends React.Component {
 
   handleClick = (locale) => {
     this.setState({
-      locale: locale,
+      locale,
     });
   };
 
@@ -31,7 +31,8 @@ class Clock extends React.Component {
     });
   }
 
-  render() {
+    render() {
+              console.log('Clock component rendered');
     const { date, locale } = this.state;
     return (
       <div>
@@ -47,7 +48,7 @@ class Clock extends React.Component {
 }
 
 ReactDOM.render(
-  <Clock locale="bn-BD">Test</Clock>,
+  <Clock locale="bn-BD"></Clock>,
   document.getElementById('root')
 );
 
