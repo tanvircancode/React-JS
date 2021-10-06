@@ -3,7 +3,7 @@ import React from 'react';
 class Button extends React.Component {
 
     shouldComponentUpdate(nextProps) {
-        const { change: currentChange} = this.props;
+        const { change: currentChange } = this.props;
         const { change: nextChange } = nextProps;
 
         if (currentChange === nextChange) {
@@ -13,9 +13,9 @@ class Button extends React.Component {
     }
     render() {
         console.log('button component rendered')
-        const { change } = this.props;
+        const { change, locale } = this.props;
         return (
-            <button type="button" onClick={change}>
+            <button type="button" onClick={ () => change(locale)}>
             click here
             </button>
         );
