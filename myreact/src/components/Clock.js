@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Button from './Button';
 
 class Clock extends React.Component {
@@ -32,7 +31,7 @@ class Clock extends React.Component {
   }
 
     render() {
-              console.log('Clock component rendered');
+    console.log('Clock component rendered');
     const { date, locale } = this.state;
     return (
       <div>
@@ -47,9 +46,9 @@ class Clock extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Clock locale="bn-BD"></Clock>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <Clock locale="bn-BD"></Clock>,
+//   document.getElementById('root')
+// );
 
 export default Clock;
