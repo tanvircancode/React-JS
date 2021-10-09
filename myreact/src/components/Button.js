@@ -12,12 +12,19 @@ class Button extends React.Component {
         return true;
     }
     render() {
-        console.log('button component rendered')
-        const { change, locale } = this.props;
+
+        const { change, locale, show, enable } = this.props;
+        if (!enable) {
+          return null;
+        }
         return (
-            <button type="button" onClick={ () => change(locale)}>
-            click here
+          <>
+            <button type="button" onClick={() => change(locale)}>
+              {locale === 'bn-BD' ? 'Change clock' : 'ঘড়ি পরিবর্তন করুন'}
             </button>
+
+            {show && <p>Hello </p>}
+          </>
         );
 
     }
