@@ -1,7 +1,10 @@
-import Calculator from "./components/Calculator";
-
+import ClickCounter from './components/ClickCounter';
 function App() {
-    return <Calculator />;
+  return (
+    <div className="app">
+      <ClickCounter />
+    </div>
+  );
 }
 
 export default App;
