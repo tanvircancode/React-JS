@@ -4,7 +4,11 @@ export default class Counter extends React.Component {
   state = {
     count: 0,
   };
-
+    switchTheme = () => {
+        this.setState(
+            
+        )
+ }
   incrementCount = () => {
     this.setState((prevState) => ({
       count: prevState.count + 1,
