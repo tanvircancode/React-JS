@@ -1,42 +1,19 @@
-// import ClickCounter from './components/ClickCounter';
-// // import HoverCounter from './components/HoverCounter';
-// // import User from './components/User';
-// import Section from './components/Section';
-// import ThemeContext from './contexts/themeContext';
-// import Counter from './components/Counter';
 import React from 'react';
-import Counter from './components/Counter';
-export default class App extends React.Component {
-//   state = {
-//     theme: 'dark',
-//     switchTheme: () => {
-//       this.setState(({ theme }) => {
-//         if (theme === 'dark') {
-//           return { theme: 'light' };
-//         } else {
-//           return { theme: 'dark' };
-//         }
-//       });
-//     },
-//   };
+import MyComponent from './components/MyComponent';
+import { useState } from 'react';
 
-    render() {
+// import MyComponentClass from './components/MyComponent';
+export default function App() {
+  const [show, setShow] = useState(true);
 
-        return (
-          <div className="app">
-            <Counter />
-          </div>
-          //   <div className="app">
-          //     <Counter>
-          //       {(count, incrementCount) => (
-          //         <ClickCounter count={count} incrementCount={incrementCount} />
-          //       )}
-          //     </Counter>
-          //     <ThemeContext.Provider value={this.state}>
-          //       <Section />
-          //     </ThemeContext.Provider>
-          //   </div>
-        );
-  }
+  return (
+    <div className="app">
+      <div>{show && <MyComponent />} </div>
+      <p>
+        <button type="button" onClick={() => setShow((prevShow) => !prevShow)}>
+          {show ? 'hide post' : 'show post'}
+        </button>
+      </p>
+    </div>
+  );
 }
-
