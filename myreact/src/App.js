@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from './components/Counter';
+import CounterThree from './components/CounterThree';
 
 // import { useMemo, useState, useCallback } from 'react';
 
@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div className="app">
       <div>
-        <Counter />
+        <CounterThree />
       </div>
     </div>
   );
