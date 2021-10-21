@@ -38,7 +38,7 @@ export default function Counter() {
         </button>
       </div>
       <div>
-        <div>Count : {count2}</div>
+        <div>Count2 : {count2}</div>
         <button
           type="button"
           onClick={() => {
