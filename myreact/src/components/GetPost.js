@@ -1,5 +1,5 @@
-import ComponentB from './ComponentB';
-import { useEffect, useReducer } from 'react';
+
+import { useEffect, useState } from 'react';
 
 export default function GetPost() {
   const [loading, setLoading] = useState(true);
@@ -7,21 +7,24 @@ export default function GetPost() {
   const [post, setPost] = useState({});
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts/1')
-            .then((response) => response.json())
-            .then((data) => {
-                setLoading(false);
-                setPost(data);
-                setError('');
-            });
-      .catch(err => {
-
+      fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then((response) => response.json())
+        .then((data) => {
+          setLoading(false);
+          setPost(data);
+          setError('');
+        })
+        .catch(() => {
+          setLoading(false);
+          setError('There was a problem');
+          setPost({});
         });
-  }, []);
+    }, []);
 
-  return (
-    <div>
-      <ComponentB />
-    </div>
-  );
+    return (
+      <div>
+        {loading ? 'Loading...' : post.title}
+        {error || null}
+      </div>
+    );
 }
