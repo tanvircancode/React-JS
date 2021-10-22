@@ -1,9 +1,9 @@
-import LayoutComponent from './components/LayoutComponent';
+import LayoutComponentTwo from './components/LayoutComponentTwo';
 
 export default function App() {
   return (
     <div className="app">
-      <LayoutComponent />
+      <LayoutComponentTwo />
     </div>
   );
 }
