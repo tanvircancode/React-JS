@@ -1,9 +1,10 @@
-import LayoutComponentTwo from './components/LayoutComponentTwo';
+import './assets/css/global.css';
+import Tutorial from './components/Tutorial';
 
 export default function App() {
   return (
     <div className="app">
-      <LayoutComponentTwo />
+      <Tutorial />
     </div>
   );
 }

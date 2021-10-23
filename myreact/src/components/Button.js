@@ -1,13 +1,20 @@
-import React from 'react';
+// import React from 'react';
 
-function Button({ handleClick, children }) {
-  console.log(`rendering button ${children}`);
+// function Button({ handleClick, children }) {
+//   console.log(`rendering button ${children}`);
+//   return (
+//     <p>
+//       <button type="button" onClick={handleClick}>
+//         {children}
+//       </button>
+//     </p>
+//   );
+// }
+// export default React.memo(Button);
+export default function Button({ link, text }) {
   return (
-    <p>
-      <button type="button" onClick={handleClick}>
-        {children}
-      </button>
-    </p>
+    <a href={link} target="_blank" rel="noreferrer">
+      {text}
+    </a>
   );
 }
-export default React.memo(Button);
