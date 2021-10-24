@@ -1,9 +1,12 @@
 import Button from './Button';
-import Image from './Image';
-// import Content from './Content';
+
 import nerdImage from '../assets/images/illustration.png';
-import { CardContainer, ContentContainer , ButtonContainer} from './styles/Container.styles';
-import {Tag,H1,P} from './styles/Elements';
+import {
+  CardContainer,
+  ContentContainer,
+  ButtonContainer,
+} from './styles/Container.styles';
+import { Tag, H1, P, Image } from './styles/Elements';
 
 
 export default function Card() {
@@ -21,7 +24,7 @@ export default function Card() {
           <Button link="https://lwsbd.link/react" text="Github repo" />
         </ButtonContainer>
       </ContentContainer>
-      <Image imgSrc={nerdImage} alt="Nerd" width="300px" />
+      <Image src={nerdImage} alt="Nerd" width="300px" />
     </CardContainer>
   );
 }
