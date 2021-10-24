@@ -1,10 +1,6 @@
-import './assets/css/global.css';
+import './assets/css/dark.css';
 import Tutorial from './components/Tutorial';
 
 export default function App() {
-  return (
-    <div className="app">
-      <Tutorial />
-    </div>
-  );
+  return <Tutorial />;
 }
