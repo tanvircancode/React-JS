@@ -11,7 +11,7 @@ export const Tag = styled.div`
 `;
 
 export const H1 = styled.h1`
-  color: ${(props) => props.color};
+  color:#fff;
 `;
 export const P = styled.p`
   width: 280px;
