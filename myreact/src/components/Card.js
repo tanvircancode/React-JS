@@ -15,7 +15,7 @@ export default function Card() {
       <ContentContainer>
         <Tag color="#4361ee">EXCLUSIVE</Tag>
         <H1>
-          <StyledTitle text="React Styled Components" color="#fff"/>
+          <StyledTitle text="React Styled Components" color="#fff" />
         </H1>
         <P>
           Exclusive React JS Tutorial on Styled Components where you will learn
