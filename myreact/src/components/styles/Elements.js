@@ -17,7 +17,6 @@ export const P = styled.p`
   width: 280px;
   font-size: 13px;
   line-height: 1.4;
-  background: ${(props) => props.color};
   color: #aaa;
   margin: 20px 0;
 `;
