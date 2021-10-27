@@ -1,10 +1,17 @@
-export default function Posts({match}) {
-    const { params } = match;
+import { useParams } from 'react-router-dom';
 
-    console.log(match);
+export default function Posts({ match }) {
+  const { category, topic } = useParams();
+
+  //   console.log(parameters);
+  //   const { params } = match;
+    // console.log(match);
+
   return (
     <div>
-      <div>This is the post page {params.category} / {params.topic} </div>
+      <div>
+        This is the post page {category} / {topic}
+      </div>
     </div>
   );
 }
