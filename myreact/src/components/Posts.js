@@ -1,9 +1,14 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory,useLocation } from 'react-router-dom';
 
-export default function Posts({ match }) {
-  const { category, topic } = useParams();
+export default function Posts() {
+    const { category, topic } = useParams();
+    const history = useHistory();
 
-  //   console.log(parameters);
+    const handleClick = () => {
+        history.push("/home")
+    }
+
+    // console.log(history);
   //   const { params } = match;
     // console.log(match);
 
@@ -11,7 +16,8 @@ export default function Posts({ match }) {
     <div>
       <div>
         This is the post page {category} / {topic}
-      </div>
+          </div>
+          <button type="button" onClick={handleClick}>Go Home</button>
     </div>
   );
 }
