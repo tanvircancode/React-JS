@@ -1,4 +1,4 @@
-import { useParams, useHistory,useLocation } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 export default function Posts() {
     const { category, topic } = useParams();
